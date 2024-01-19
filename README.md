@@ -1,24 +1,20 @@
-# Instagram Clone Project
+# Instagram Clone Project - SQL Queries
 
 ## Overview
 
-This project aims to create a simplified version of Instagram, focusing on the database design using SQL. The goal is to replicate some of the key features of Instagram, such as user management, photo sharing, and interactions.
+This project centers around building an Instagram Clone with a specific emphasis on designing and implementing SQL queries for efficient data retrieval, manipulation, and management. The goal is to create a robust database structure and optimize queries to ensure smooth performance for a social media platform.
 
 ## Features
 
-- **User Management:** Users can create accounts, log in, and update their profiles.
-- **Photo Sharing:** Users can upload photos, add captions, and share them with their followers.
-- **Followers/Following:** Users can follow and unfollow other users to build a network.
-- **Feed:** A personalized feed for each user displaying posts from the users they follow.
-- **Likes and Comments:** Users can like and comment on photos.
-
-## Tech Stack
-
-- **Database:** SQL (Structured Query Language)
+- **User Management:** SQL queries for user registration, login, profile updates, and authentication.
+- **Photo Sharing:** Efficient storage and retrieval of image data, handling captions, and associated metadata.
+- **Followers/Following:** SQL queries to manage user relationships, including following and unfollowing.
+- **Feed Optimization:** Designing queries for generating personalized feeds based on user-following relationships.
+- **Likes and Comments:** Managing likes and comments with SQL queries for insertion, retrieval, and updates.
 
 ## Database Schema
 
-The database design will be crucial to the functionality of the application. Here's a simplified schema:
+The database design is crucial for optimizing SQL queries. Here's a simplified schema:
 
 ### Tables
 
@@ -26,7 +22,7 @@ The database design will be crucial to the functionality of the application. Her
    - UserID (Primary Key)
    - Username
    - Email
-   - Password
+   - Password (Hashed)
    - Profile Picture
    - ...
 
@@ -51,3 +47,8 @@ The database design will be crucial to the functionality of the application. Her
    - Text
    - ...
 
+## SQL Query Examples
+
+1. **Retrieve User's Posts:**
+   ```sql
+   SELECT * FROM Posts WHERE UserID = :userID;
